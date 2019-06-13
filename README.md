@@ -6,7 +6,11 @@ This repository reproduces issues with the `github.com/unidoc/unipdf/v3` package
 
 ### Source code
 
-- `pdf_form_flatten.go` was copied from [unipdf-examples](https://github.com/unidoc/unipdf-examples/blob/4366cd9d61e9d2b1d70fa2940c104b34f1d489ce/forms/pdf_form_flatten.go).
+- `pdf_form_flatten.go` was copied from [unipdf-examples](https://github.com/unidoc/unipdf-examples/blob/4366cd9d61e9d2b1d70fa2940c104b34f1d489ce/forms/pdf_form_flatten.go). This was edited to set the `allannots` argument to `true`:
+    ```go
+    -       err = pdfReader.FlattenFields(false, fieldAppearance)
+    +       err = pdfReader.FlattenFields(true, fieldAppearance)
+    ```
 
 ### Input PDFs
 
